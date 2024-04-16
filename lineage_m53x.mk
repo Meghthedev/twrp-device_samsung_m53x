@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2023 The OrangeFox Recovery Project
+# Copyright (C) 2024 The LineageOS Project
 #
 # SPDX-License-Identifier: Apache-2.0
 #
@@ -8,17 +8,21 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
-# Inherit from our custom product configuration
+# Inherit some common Lineage stuff.
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
 # Inherit from m53x device
 $(call inherit-product, device/samsung/m53x/device.mk)
 
-# Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := m53x
 PRODUCT_NAME := lineage_m53x
 PRODUCT_BRAND := samsung
-PRODUCT_MODEL := Samsung Galaxy M53
+PRODUCT_MODEL := SM-M536B
 PRODUCT_MANUFACTURER := samsung
 
-PRODUCT_GMS_CLIENTID_BASE := android-samsung
+PRODUCT_GMS_CLIENTID_BASE := android-samsung-ss
+
+PRODUCT_BUILD_PROP_OVERRIDES += \
+    PRIVATE_BUILD_DESC="m53xnsxx-user 14 UP1A.231005.007 M536BXXS5DXB3 release-keys"
+
+BUILD_FINGERPRINT := samsung/m53xnsxx/m53x:14/UP1A.231005.007/M536BXXS5DXB3:user/release-keys
