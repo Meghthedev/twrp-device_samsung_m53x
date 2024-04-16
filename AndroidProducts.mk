@@ -8,6 +8,6 @@ PRODUCT_MAKEFILES := \
     $(LOCAL_DIR)/lineage_m53x.mk
 
 COMMON_LUNCH_CHOICES := \
-    lineage_m53x-user \
-    lineage_m53x-userdebug \
-    lineage_m53x-eng
+    lineage_m53x-ap1a-user \
+    lineage_m53x-ap1a-userdebug \
+    lineage_m53x-ap1a-eng
